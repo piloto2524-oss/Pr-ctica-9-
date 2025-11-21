@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int lista[10];          // Arreglo unidimensional
+    int indice = 0;
+    int numeroElementos = 0;
+
+    printf("\nDa un número entre 2 y 10 para indicar la cantidad de elementos del arreglo:\n");
+    scanf("%d", &numeroElementos);
+
+    // Validar el número de elementos
+    if ((numeroElementos >= 2) && (numeroElementos <= 10)) {
+
+        // Llenar el arreglo
+        for (indice = 0; indice < numeroElementos; indice++) {
+            printf("Dar un número entero para el elemento %d del arreglo: ", indice);
+            scanf("%d", &lista[indice]);
+        }
+
+        // Mostrar resultados
+        printf("\nLos valores dados son:\n");
+        for (indice = 0; indice < numeroElementos; indice++) {
+            printf("%d ", lista[indice]);
+        }
+
+    } else {
+        printf("El valor dado no es válido\n");
+    }
+
+    printf("\n");
+    return 0;
+}
