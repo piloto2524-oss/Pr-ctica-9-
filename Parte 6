@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main ()
+{
+    int lista[5] = {10, 8, 5, 8, 7};  // Arreglo correctamente inicializado
+    int *ap = lista;                  // ap apunta al primer elemento
+    int indice = 0;
+
+    printf("\tlista\n");
+
+    // Se accede a cada elemento del arreglo usando un apuntador y while
+    while (indice < 5)
+    {
+        printf("\nCalificación del alumno %d es %d", indice+1, *(ap + indice));
+        indice++;
+    }
+
+    printf("\n");
+    return 0;
+}
